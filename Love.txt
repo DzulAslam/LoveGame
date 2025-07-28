@@ -1,0 +1,98 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>❤️ Love Check ❤️</title>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Quicksand', sans-serif;
+      background: linear-gradient(to bottom right, #ffe6f0, #e0f7fa);
+      text-align: center;
+      padding: 50px;
+    }
+    .question {
+      background: #ffffffcc;
+      border: 2px solid #ffb6c1;
+      border-radius: 16px;
+      padding: 30px;
+      max-width: 500px;
+      margin: 20px auto;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+    }
+    button {
+      background-color: #ff80ab;
+      border: none;
+      border-radius: 10px;
+      padding: 12px 24px;
+      margin: 10px;
+      font-size: 16px;
+      color: white;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    button:hover {
+      background-color: #f06292;
+    }
+    #finalMessage {
+      font-size: 24px;
+      color: #d81b60;
+      margin-top: 30px;
+    }
+  </style>
+</head>
+<body>
+  <h1>❤️ Love Check ❤️</h1>  <div class="question" id="q1">
+    <p>Do you like me?</p>
+    <button onclick="nextQuestion('q1','q2')">Maybe, too much.</button>
+    <button onclick="nextQuestion('q1','q2')">I like you, I like like like you.</button>
+  </div>  <div class="question" id="q2" style="display:none">
+    <p>Will you be mine?</p>
+    <button onclick="nextQuestion('q2','q3')">I'm already yours.</button>
+    <button onclick="nextQuestion('q2','q3')">I'm desperate to be Dzul's wifey.</button>
+  </div>  <div class="question" id="q3" style="display:none">
+    <p>How much do you love me?</p>
+    <button onclick="nextQuestion('q3','q4')">Too much to explain.</button>
+    <button onclick="nextQuestion('q3','q4')">More than ayam gunting.</button>
+  </div>  <div class="question" id="q4" style="display:none">
+    <p>Do u miss me right now?</p>
+    <button onclick="nextQuestion('q4','q5')">Yes, every second, actually.</button>
+    <button onclick="nextQuestion('q4','q5')">Nope, I miss you all the time.</button>
+  </div>  <div class="question" id="q5" style="display:none">
+    <p>Do you smile when you see my name pop up?</p>
+    <button onclick="nextQuestion('q5','q6')">No, I can’t stop smiling.</button>
+    <button onclick="nextQuestion('q5','q6')">Yes, it’s automatic.</button>
+  </div>  <div class="question" id="q6" style="display:none">
+    <p>How often do you think of me?</p>
+    <button onclick="nextQuestion('q6','q7')">All the time, even when I’m not supposed to.</button>
+    <button onclick="nextQuestion('q6','q7')">More than I should admit.</button>
+  </div>  <div class="question" id="q7" style="display:none">
+    <p>Do you think about me before you sleep?</p>
+    <button onclick="nextQuestion('q7','q8')">You live in my head rent free.</button>
+    <button onclick="nextQuestion('q7','q8')">Every night’s message goes to you, no one else.</button>
+  </div>  <div class="question" id="q8" style="display:none">
+    <p>Do I make you feel special?</p>
+    <button onclick="nextQuestion('q8','q9')">Like I’m the only one in your world.</button>
+    <button onclick="nextQuestion('q8','q9')">I feel like a princess sometimes.</button>
+  </div>  <div class="question" id="q9" style="display:none">
+    <p>Who’s more clingy?</p>
+    <button onclick="nextQuestion('q9','q10')">You, but I’m not far behind.</button>
+    <button onclick="nextQuestion('q9','q10')">Not me, but maybe me.</button>
+  </div>  <div class="question" id="q10" style="display:none">
+    <p>If you don’t hear from me for a day, what would you feel?</p>
+    <button onclick="showFinalMessage()">I’d be chill, until I’m not.</button>
+    <button onclick="showFinalMessage()">Mengamuk dan merajuk.</button>
+  </div>  <div id="finalMessage" style="display:none">
+    🎉 Congrats, you’re officially my one and only wife to be, no one else even came close! 💍💘
+  </div>  <script>
+    function nextQuestion(current, next) {
+      document.getElementById(current).style.display = 'none';
+      document.getElementById(next).style.display = 'block';
+    }
+
+    function showFinalMessage() {
+      document.getElementById('q10').style.display = 'none';
+      document.getElementById('finalMessage').style.display = 'block';
+    }
+  </script></body>
+</html>
